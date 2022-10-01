@@ -5,9 +5,12 @@
 */
 
 const startB = document.getElementById("addItem");
-startB.addEventListener("click", add);
-console.log("hi");
+startB.addEventListener("click", add); //on click it runs add
 
 function add() {
-    document.getElementById("foodList").innerHTML = "hi";
+    amount = document.querySelector(".amt").value;
+    measurement = document.querySelector(".amtUnit").value;
+    food = documet.querySelector(".item").value;
+    document.getElementById("foodList").innerHTML =
+        amount + " " + measurement + " of " + food;
 }
