@@ -9,7 +9,8 @@ startB.addEventListener("click", add); //on click it runs add
 //set("amtUnit", "Enter an Amount");
 var text = "";
 
-function add() {
+function add()
+{
     const amount = document.querySelector(".amt").value;
     const measurement = document.querySelector(".amtUnit").value;
     const food = document.querySelector(".item").value;
@@ -20,12 +21,12 @@ function add() {
     text = text + "<br/>" + amount + " " + measurement + " of " + food + "<br/>";
     document.getElementById("foodList").innerHTML = text;
 
-    setText("amt", " ");
-    setText("amtUnit", "Enter a unit");
-    // setText("item", " ");
+    setText("item", "");
+    setText("amt", "");
     //console.log(amount + " " + measurement);
 }
 
 function setText(piece, text) {
     document.querySelector("." + piece).value = text;
 }
+

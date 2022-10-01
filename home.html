@@ -17,20 +17,19 @@
     </header>
     <article>
         <h1> home </h1>
-        <label for "item">item:</label>
-        <input type="text" class="item" placeholder = "please enter an food item">
+        <label for="item">item:</label>
+        <input type="text" list="foodItems" class="item" id="item" name="item" autocomplete="off" placeholder = "please enter an food item"/>
         <br>
-        <label for "amt">amount:</label>
+        <label for="amt">amount:</label>
         <input type="text" class="amt" placeholder = "please enter a number">
 
         <label for="amtUnit"></label>
-
         <select name="amtUnit" class="amtUnit">
+        <option value="grams" selected="selected">grams</option>
         <option value="pounds">pounds</option>
+        <option value="cups">cups</option>
         <option value="ounces">ounces</option>
         <option value="units">units</option>
-        <option value="grams">grams</option>
-        <option value="cups">cups</option>
         
       </select>
 
@@ -39,7 +38,308 @@
         <br>
         <p> added items: </p>
         <p id="foodList"> </p>
+        
+        <datalist id="foodItems">
+            <option> Acorn Squash </option>
+            <option> Almonds (shelled or peeled) </option>
+            <option> Almonds (with shell) </option>
+            <option> Animal Fats </option>
+            <option> Anise (seeds) </option>
+            <option> Apple Juice </option>
+            <option> Apples </option>
+            <option> Apricots </option>
+            <option> Aquatic Plants </option>
+            <option> Arctic Char (fish) </option>
+            <option> Artichokes </option>
+            <option> Asparagus </option>
+            <option> Avocados </option>
+            <option> Baby Back Ribs </option>
+            <option> Bacon </option>
+            <option> Bananas </option>
+            <option> Barley </option>
+            <option> Basil </option>
+            <option> Beans </option>
+            <option> Beans (dry) </option>
+            <option> Beef </option>
+            <option> Beef (Bovine Meat) </option>
+            <option> Beer </option>
+            <option> Craft Beer </option>
+            <option> Beets </option>
+            <option> Bell Peppers </option>
+            <option> Bitter Melon </option>
+            <option> Black Beans </option>
+            <option> Black-Eyed Peas (Cowpeas) </option>
+            <option> Blackberries </option>
+            <option> Blood Oranges </option>
+            <option> Blueberries </option>
+            <option> Bok Choy </option>
+            <option> Boysenberries </option>
+            <option> Bread </option>
+            <option> Broad Beans </option>
+            <option> Broccoli </option>
+            <option> Brown Rice </option>
+            <option> Brussels Sprouts </option>
+            <option> Buckwheat </option>
+            <option> Butter </option>
+            <option> Buttermilk </option>
+            <option> Butternut Squash </option>
+            <option> Cabbage </option>
+            <option> Canola Oil / Rapeseed Oil </option>
+            <option> Cantaloupe </option>
+            <option> Cardamom </option>
+            <option> Carob </option>
+            <option> Carp (fish) </option>
+            <option> Carrots </option>
+            <option> Cashews </option>
+            <option> Castor Oil </option>
+            <option> Catfish </option>
+            <option> Catfish (fish) </option>
+            <option> Cauliflower </option>
+            <option> Celery </option>
+            <option> Cephalopods (Squid) </option>
+            <option> Cereal </option>
+            <option> Cheese </option>
+            <option> Cherries </option>
+            <option> Chestnuts </option>
+            <option> Chicken </option>
+            <option> Chickpeas (Garbanzo Beans) </option>
+            <option> Chinese Cabbage </option>
+            <option> Chocolate </option>
+            <option> Cilantro </option>
+            <option> Cinnamon </option>
+            <option> Citrus </option>
+            <option> Cloves </option>
+            <option> Cocoa Beans </option>
+            <option> Cocoa Butter </option>
+            <option> Cocoa Powder </option>
+            <option> Coconut Oil </option>
+            <option> Coconuts </option>
+            <option> Cod (fish) </option>
+            <option> Coffee Beans </option>
+            <option> Coriander (seeds) </option>
+            <option> Corn </option>
+            <option> Corn (kernels) </option>
+            <option> Corn Flour </option>
+            <option> Corn Oil </option>
+            <option> Corn Syrup </option>
+            <option> Cottage Cheese </option>
+            <option> Cranberries </option>
+            <option> Cream </option>
+            <option> Crustaceans (Crab) </option>
+            <option> Cucumbers </option>
+            <option> Dates </option>
+            <option> Demersal Fish </option>
+            <option> Duck </option>
+            <option> Eggplant </option>
+            <option> Eggplant (Asian) </option>
+            <option> Eggs </option>
+            <option> Evaporated Milk </option>
+            <option> Fava Beans </option>
+            <option> Fennel (seeds) </option>
+            <option> Figs </option>
+            <option> Fish </option>
+            <option> Flatfish </option>
+            <option> Wheat Flour </option>
+            <option> Freshwater Fish </option>
+            <option> Fruits </option>
+            <option> Garlic </option>
+            <option> Garlic Powder </option>
+            <option> Gherkins </option>
+            <option> Ginger </option>
+            <option> Goat Meat (Mutton) </option>
+            <option> Goose </option>
+            <option> Gooseberries </option>
+            <option> Gourds </option>
+            <option> Grapefruit </option>
+            <option> Grapes </option>
+            <option> Green Beans </option>
+            <option> Green Onions </option>
+            <option> Buckwheat Groats Meal </option>
+            <option> Groundnut Oil </option>
+            <option> Groundnuts (Shelled) </option>
+            <option> Guava </option>
+            <option> Ham </option>
+            <option> Hash Browns/Fried Potatoes </option>
+            <option> Hazelnuts (shelled or peeled) </option>
+            <option> Hazelnuts (with shell) </option>
+            <option> Hempseed </option>
+            <option> Herring </option>
+            <option> Honey </option>
+            <option> Honeydew Melon </option>
+            <option> Hop Extract </option>
+            <option> Horse Meat </option>
+            <option> Ice Cream </option>
+            <option> Jalapeno Peppers </option>
+            <option> JalapeÃ±o Peppers </option>
+            <option> Kale </option>
+            <option> Kefir </option>
+            <option> Ketchup </option>
+            <option> Kidney Beans </option>
+            <option> Kiwi </option>
+            <option> Lamb </option>
+            <option> Lemongrass </option>
+            <option> Lemons </option>
+            <option> Lentils </option>
+            <option> Lettuce </option>
+            <option> Lettuce (romaine hearts) </option>
+            <option> Lima Beans </option>
+            <option> Limes </option>
+            <option> Lobster </option>
+            <option> Mackerel </option>
+            <option> Maize </option>
+            <option> Maize Germ Oil </option>
+            <option> Malt (not roasted) </option>
+            <option> Malt (roasted) </option>
+            <option> Malt Whiskey </option>
+            <option> Malted Barley </option>
+            <option> Mandarin Oranges / Tangerines / Clementines </option>
+            <option> Mangos </option>
+            <option> Margarine </option>
+            <option> Marinara Sauce </option>
+            <option> Marine Fish </option>
+            <option> Mashed Potato Flakes </option>
+            <option> Meat </option>
+            <option> Melons </option>
+            <option> Milk </option>
+            <option> Milk Powder </option>
+            <option> Millet </option>
+            <option> Mint </option>
+            <option> Mollusks </option>
+            <option> Mullet (fish) </option>
+            <option> Mushrooms </option>
+            <option> Mussels </option>
+            <option> Mustard Seeds </option>
+            <option> Nectarines </option>
+            <option> Nutmeg </option>
+            <option> Nuts </option>
+            <option> Oat Bran </option>
+            <option> Oatmeal, groats </option>
+            <option> Oats </option>
+            <option> Oats (rolled or flaked grains) </option>
+            <option> Offals (internal organs) </option>
+            <option> Okra </option>
+            <option> Olive Oil (refined) </option>
+            <option> Olive Oil (virgin) </option>
+            <option> Olives </option>
+            <option> Onions </option>
+            <option> Orange Juice </option>
+            <option> Oranges </option>
+            <option> Oysters </option>
+            <option> Palm Kernel Oil </option>
+            <option> Palm Oil </option>
+            <option> Papaya </option>
+            <option> Parsley </option>
+            <option> Pasta </option>
+            <option> Peaches </option>
+            <option> Peanut Butter </option>
+            <option> Peanut Oil </option>
+            <option> Peanuts </option>
+            <option> Pears </option>
+            <option> Peas </option>
+            <option> Pecans </option>
+            <option> Pelagic Fish </option>
+            <option> Pepper </option>
+            <option> Peppermint </option>
+            <option> Pepperoni </option>
+            <option> Pig Meat </option>
+            <option> Pimento </option>
+            <option> Pineapple </option>
+            <option> Pineapple Juice </option>
+            <option> Pinto Beans </option>
+            <option> Pistachios </option>
+            <option> Plantains </option>
+            <option> Plums </option>
+            <option> Pomegranates </option>
+            <option> Pomelo </option>
+            <option> Poppy Seeds </option>
+            <option> Pork </option>
+            <option> Potato Chips </option>
+            <option> Potato Starch </option>
+            <option> Potatoes </option>
+            <option> Poultry Meat </option>
+            <option> Prunes </option>
+            <option> Pulses </option>
+            <option> Pumpkins </option>
+            <option> Radishes </option>
+            <option> Mustard Oil </option>
+            <option> Rapeseed and Mustard Seed </option>
+            <option> Raspberries </option>
+            <option> Red Cabbage </option>
+            <option> Red Currants </option>
+            <option> Rice </option>
+            <option> Rice Bran </option>
+            <option> Rice Flour </option>
+            <option> Rolled Flaked Grains </option>
+            <option> Rye </option>
+            <option> Rye Flour </option>
+            <option> Sale </option>
+            <option> Salmon </option>
+            <option> Sauerkraut </option>
+            <option> Sausage </option>
+            <option> Savoy Cabbage </option>
+            <option> Sea Bass </option>
+            <option> Sesame Oil </option>
+            <option> Sesame Seeds </option>
+            <option> Shallots </option>
+            <option> Shortening </option>
+            <option> Shrimp </option>
+            <option> Prawn </option>
+            <option> Silver Carp (fish) </option>
+            <option> Soft Drinks </option>
+            <option> Sorghum </option>
+            <option> Sour Cream </option>
+            <option> Soy Milk </option>
+            <option> Soy Sauce </option>
+            <option> Soybean Oil </option>
+            <option> Soybeans </option>
+            <option> Spices </option>
+            <option> Spinach </option>
+            <option> Squash </option>
+            <option> Starchy Roots (Parsnips) </option>
+            <option> Strawberries </option>
+            <option> String Beans </option>
+            <option> Sugar </option>
+            <option> Sugar (raw) </option>
+            <option> Sugarcane </option>
+            <option> Sunflower Oil </option>
+            <option> Sunflower Seeds </option>
+            <option> Sweet Potatoes </option>
+            <option> Taro Root </option>
+            <option> Tea (including Black, Green) </option>
+            <option> Tempeh </option>
+            <option> Tilapia </option>
+            <option> Tofu </option>
+            <option> Tomato Paste </option>
+            <option> Tomatoes </option>
+            <option> Trout (fish) </option>
+            <option> Tuna </option>
+            <option> Skipjack or Yellowfin Tuna </option>
+            <option> Turkey </option>
+            <option> Turnips </option>
+            <option> Vanilla Beans </option>
+            <option> Vegetable Oil </option>
+            <option> Vegetable Oil (Hydrogenated) </option>
+            <option> Vegetables </option>
+            <option> Walnuts </option>
+            <option> Watermelon </option>
+            <option> Wheat </option>
+            <option> Wheat Bran </option>
+            <option> Wheat Germ </option>
+            <option> Wheat Gluten </option>
+            <option> Whey </option>
+            <option> White Currants </option>
+            <option> Wine </option>
+            <option> Red wine </option>
+            <option> White wine </option>
+            <option> Yams </option>
+            <option> Yellow Mustard </option>
+            <option> Yellow Squash </option>
+            <option> Yogurt </option>
+            <option> Zucchini </option>
 
+        </datalist>
+        
+        
 
         <button type="button">calculate</button>
 
