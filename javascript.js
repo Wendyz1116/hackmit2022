@@ -17,7 +17,7 @@ function add() {
         exit; //want to also have a text with hidden and remove the hidden to say there was an error
     } //checks for bad inputs
     //also would want to try catch to make sure it wont mess with back end
-    text = text + " " + amount + " " + measurement + " of " + food;
+    text = text + "<br/>" + amount + " " + measurement + " of " + food + "<br/>";
     document.getElementById("foodList").innerHTML = text;
 
     setText("amt", " ");
