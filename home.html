@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   
-   <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <title> Food </title>
-   <link href="layout.css" rel="stylesheet" />
-   <link rel="icon" type="image/png" href="../wzw_fav.png" sizes="32x32">
-   
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> Food </title>
+    <link href="layout.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="../wzw_fav.png" sizes="32x32">
+
 </head>
 
 <body>
-   <header>
-      test
-   </header>
-   <article>
-      <h1> home </h1>
-      <label for "item">item:</label>
-      <input type="text" id="item">
-      <br>
-      <label for "amt">amount:</label>
-      <input type="text" id="amt">
-      
-      <label for="amtUnit"></label>
+    <header>
+        test
+    </header>
+    <article>
+        <h1> home </h1>
+        <label for "item">item:</label>
+        <input type="text" class="item">
+        <br>
+        <label for "amt">amount:</label>
+        <input type="text" class="amt">
 
-      <select name="amtUnit" id="amtUnit">
+        <label for="amtUnit"></label>
+
+        <select name="amtUnit" class="amtUnit">
         <option value="pounds">pounds</option>
         <option value="ounces">ounces</option>
         <option value="units">units</option>
         <option value="grams">grams</option>
         <option value="cups">cups</option>
+        
       </select>
-      
-      <br>
-      <button type="button" id="addItem">add item</button>
-      <br>
-      
-      <p> added items: </p>
-      <p id="foodList"> added items: </p>
-      
-      
-      <button type="button">calculate</button>
-      
-   </article>
-   
+
+        <br>
+        <button type="button" id="addItem">add item</button>
+        <br>
+        <p> added items: </p>
+        <p id="foodList"> </p>
+
+
+        <button type="button">calculate</button>
+
+    </article>
+
 </body>
-         
-   <br>
-   <footer>
-      <h9> hackmit2022 </h9>
-   </footer>
-   <script src="javascript.js" type="text/javascript"></script>
+
+<br>
+<footer>
+    <h9> hackmit2022 </h9>
+</footer>
+<script src="javascript.js" type="text/javascript"></script>
 </body>
