@@ -1,0 +1,249 @@
+@charset "utf-8";
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 6
+   Case Problem 2
+   
+   LHT Reset Style Sheet
+   
+   Filename: lht_reset.css
+
+*/
+
+
+/* Basic styles to be used with all devices and under all conditions */
+
+article, aside, figcaption, figure,
+footer, header, main, nav, section { 
+   display: block;
+}
+
+address, article, aside, blockquote, body, cite, 
+div, dl, dt, dd, em, figcaption, figure, footer, 
+h1, h2, h3, h4, h5, h6, header, html, img, 
+li, main, nav, nav a, ol, p, section, span, ul,
+table, tr, td, th, col, colgroup {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;  
+}
+
+
+/* Set the default page element styles */
+
+body {
+   line-height: 1.2em;
+}
+
+ul, ol {
+   list-style: none;
+}
+
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+
+nav a {
+   text-decoration: none;
+}
+
+
+img#navicon {
+   display: none;
+}
+img#logoimg
+{
+   display: block;
+   width: 300px;
+   margin: auto;
+}
+
+@font-face
+{
+    font-family: aT;
+    src: url('amerType.woff') format('woff'),
+        url('amerType.ttf') format('truetype');
+}
+
+header
+{
+  background:  #333;
+}
+
+body
+{
+   background-color: #f0e9e0;
+   min-height: 100%;   
+   margin: 0px auto;
+   width: 100%;
+   color: hsl(0,0%,20%);
+}
+
+h1
+{
+ font-family: aT;
+ margin: 18px auto 13px auto;
+ font-size: 52px;
+ text-align: center;
+ text-transform: uppercase;
+}
+h2
+{
+   font-family: aT;
+   color: #333;
+   font-weight: normal;
+   text-align: center;
+   font-size: 38px;
+   line-height: 13px;
+   margin: 38px auto 13px auto;
+}
+h3, h4
+{
+   padding: 10px;
+   font-family: aT;
+   color: #333;
+   text-align: center;
+   font-size: 23px;
+   line-height: 38px;
+   column-span: all;
+}
+h4
+{
+ line-height: 13px;
+ padding-bottom:  0px;
+}
+
+.tab {
+  overflow: hidden;
+  text-align: left;
+  margin: 38px auto 0px auto;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+   font-family: aT;
+   text-align: center;
+   font-size: 1.3em;
+   text-transform: uppercase;
+   background-color: #f0e9e0;
+   color: #333;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   padding: 13px 13px;
+   margin: 10px;
+   transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover
+{
+ text-decoration: underline;
+}
+
+/* Create an active/current tablink class */
+.tab button.active
+{
+   background-color: #333;
+   color: white;
+}
+
+/* Style the tab content */
+.tabcontent
+{
+  display: none;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+p, table.tabcontent td p
+{
+  font-family: sans-serif;
+  text-align: center;
+  padding: 8px;
+  line-height: 13px;
+  font-size: 18px;
+}
+
+/*---------*/
+
+p.transcript, article.vocab p, section.transcript p, table.tabcontent td p
+{
+ line-height: 32px;
+}
+p.py, p.chinese, p.trans, table.tabcontent td p
+{
+ color: #333;
+ padding: 0px;
+ margin: -13px;
+}
+
+p.py, p.trans, table.tabcontent td p.trans
+{
+ color: #434F60;
+ margin-bottom: 13px;
+}
+b
+{
+ color: black;
+}
+p.term, p.def
+{
+ padding: 0px 38px;
+ 
+}
+p.term
+{
+  margin-bottom: -13px;
+}
+p.break
+{
+ margin: -10px;
+}
+
+button, select
+{
+ font-family: aT;
+ font-size: 18px;
+ margin: 18px;
+ padding: 8px;
+}
+
+label
+{
+  font-family: aT;
+  font-size: 18px;
+  padding: 18px;
+  width: 38px;
+  display: inline-block;
+  min-width: 83px;
+}
+select
+{
+ min-width: 183px;
+}
+
+footer
+{
+ font-family: sans-serif;
+    text-align: center;
+    color: white;
+    height: 50px;
+    display: table-cell;
+    width: 2800px;
+    vertical-align: middle;
+    background: hsl(50,0%,20%);
+}
+h9
+{
+ text-transform: uppercase; 
+ font-family: wenBas;
+ font-size: 20px;
+}
