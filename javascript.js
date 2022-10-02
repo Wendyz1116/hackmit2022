@@ -2041,6 +2041,12 @@ function hasError(fod, amt, unt) {
         console.log("NOT A NUMBER");
         return true;
     } //checks if the amount is a numnber
+        
+    if (amt <= 0){
+      document.getElementById("errors").innerHTML = "Please enter a number greater than 0.";
+      console.log("SMALL NUMBER");
+      return true;
+    } // non negative
 
     let index = 0;
     for (let j = 0; j < foodData.length; j++) {
