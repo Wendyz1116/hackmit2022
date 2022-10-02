@@ -13,6 +13,7 @@ const amtArray = [];
 const unitArray = [];
 const carbonArray = [];
 const waterArray = [];
+var listInd = 0;
 var totalW = 0;
 var totalC = 0;
 
@@ -1939,7 +1940,6 @@ function add() {
     //console.log("\n\n");
     //hasError(food, amount, unit);
     if (hasError(food, amount, unit)) {
-      console.log(1);
       return;
     }
 
@@ -1949,11 +1949,12 @@ function add() {
     itemArray.push(food);
     amtArray.push(amount);
     unitArray.push(unit);
+    text = document.getElementById("foodList").innerHTML;
 
     if (waterArray[waterArray.length - 1] == "unknown")
         text =
         text +
-        "<br/>" +
+        "<li id = '" + listInd +"' onclick = 'removeItem("+listInd+")'>" +
         amount +
         " " +
         unit +
@@ -1963,11 +1964,11 @@ function add() {
         waterArray[waterArray.length - 1] +
         " liters of water and generates " +
         Math.round(carbonArray[carbonArray.length - 1]) +
-        " kg of CO2 equivalent <br/>";
+        " kg of CO2 equivalent </li>";
     else if (carbonArray[carbonArray.length - 1] == "unknown")
         text =
         text +
-        "<br/>" +
+        "<li id = '" + listInd +"' onclick = 'removeItem("+listInd+")'>" +
         amount +
         " " +
         unit +
@@ -1977,11 +1978,11 @@ function add() {
         Math.round(waterArray[waterArray.length - 1]) +
         " liters of water and generates " +
         carbonArray[carbonArray.length - 1] +
-        " kg of CO2 equivalent <br/>";
+        " kg of CO2 equivalent </li>";
     else
         text =
         text +
-        "<br/>" +
+        "<li id = '" + listInd +"' onclick = 'removeItem("+listInd+")'>" +
         amount +
         " " +
         unit +
@@ -1991,8 +1992,9 @@ function add() {
         Math.round(waterArray[waterArray.length - 1]) +
         " liters of water and generates " +
         Math.round(carbonArray[carbonArray.length - 1]) +
-        " kg of CO2 equivalent <br/>";
+        " kg of CO2 equivalent </li>";
     document.getElementById("foodList").innerHTML = text;
+    listInd ++;
 
     setText("item", "");
     setText("amt", "");
@@ -2001,6 +2003,14 @@ function add() {
     console.log(unitArray);
 
     //console.log(amount + " " + measurement);
+}
+
+function removeItem(itemID){
+  document.getElementById(itemID.toString()).innerHTML = "";
+  if(waterArray[itemID] != "unknown") totalW -= waterArray[itemID];
+  if(carbonArray[itemID] != "unknown") totalC -= carbonArray[itemID];
+  document.getElementById("totalWater").innerHTML = Math.round(totalW);
+  document.getElementById("totalCarbon").innerHTML = Math.round(totalC);
 }
 
 function hasError(fod, amt, unt) {
