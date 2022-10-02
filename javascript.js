@@ -19,17 +19,23 @@ const foodData = [{"item":"Acorn Squash","water":336.0,"carbon":null,"UnitWeight
 function add()
 {
     const food = document.querySelector(".item").value;
-    itemArray.push(food);
     const amount = document.querySelector(".amt").value;
-    amtArray.push(amount);
     const unit = document.querySelector(".amtUnit").value;
-    unitArray.push(unit);
+
 
     if (!amount || !unit || !food) {
         exit; //want to also have a text with hidden and remove the hidden to say there was an error
     } //checks for bad inputs
     //also would want to try catch to make sure it wont mess with back end
-    text = text + "<br/>" + amount + " " + unit + " of " + food + "<br/>";
+    scores(food, amount, unit);
+
+    itemArray.push(food);
+    amtArray.push(amount);
+    unitArray.push(unit);
+
+    if(waterArray[waterArray.length-1] == "unknown") text = text + "<br/>" + amount + " " + unit + " of " + food + ", which uses about " + waterArray[waterArray.length-1] + " liters of water and generates " + Math.round(carbonArray[carbonArray.length-1]) + " kg of CO2 equivalent <br/>";
+    else if(carbonArray[carbonArray.length-1] == "unknown") text = text + "<br/>" + amount + " " + unit + " of " + food + ", which uses about " + Math.round(waterArray[waterArray.length-1]) + " liters of water and generates " + carbonArray[carbonArray.length-1] + " kg of CO2 equivalent <br/>";
+    else text = text + "<br/>" + amount + " " + unit + " of " + food + ", which uses about " + Math.round(waterArray[waterArray.length-1]) + " liters of water and generates " + Math.round(carbonArray[carbonArray.length-1]) + " kg of CO2 equivalent <br/>";
     document.getElementById("foodList").innerHTML = text;
 
 
