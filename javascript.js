@@ -13,6 +13,8 @@ const amtArray = [];
 const unitArray = [];
 const carbonArray = [];
 const waterArray = [];
+var totalW = 0;
+var totalC = 0;
 
 const foodData = [{
         item: "Acorn Squash",
@@ -2105,20 +2107,25 @@ function scores(food, amount, unit) {
     c = 0;
     w = 0;
 
-    if (carbon_per_kg == null) {
-        c = "unknown";
+    if(carbon_per_kg== null){
+      c = "unknown";
     } else {
-        c = carbon_per_kg * a;
+      c = carbon_per_kg*a;
+      totalC += c;
     }
 
-    if (water_per_kg == null) {
-        w = "unknown";
+    if(water_per_kg== null){
+      w = "unknown";
     } else {
-        w = water_per_kg * a;
+      w = water_per_kg*a;
+      totalW += w;
     }
 
     carbonArray.push(c);
     waterArray.push(w);
+
+    document.getElementById("totalWater").innerHTML = Math.round(totalW);
+    document.getElementById("totalCarbon").innerHTML = Math.round(totalC);
 }
 
 console.log(scores("Avadoes", 1, "unit"));
