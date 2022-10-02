@@ -82,7 +82,7 @@ body
 {
    background-color: #daf7dc;
    min-height: 100%;
-   margin: 0px auto;
+   margin: 0px auto 60px auto;
    width: 100%;
    color: #2F4858;
 }
@@ -228,11 +228,11 @@ footer
     text-align:center;
     background-color: #2F4858;
     padding-top: 10px;
+    opacity: 0.75;
 }
 
 h9
 {
- text-transform: uppercase;
  font-family: 'Raleway', sans-serif;
  font-size: 20px;
 }
