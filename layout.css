@@ -236,3 +236,16 @@ h9
  font-family: 'Raleway', sans-serif;
  font-size: 20px;
 }
+
+li{
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  padding: 8px;
+  line-height: 13px;
+  font-size: 18px;
+}
+
+li:hover{
+  text-decoration: line-through;
+  cursor: pointer;
+}
