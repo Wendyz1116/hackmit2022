@@ -93,10 +93,10 @@ function scores(food, amount, unit){
     console.log(water_per_kg);
 
     a = 0;
-    if (unit == "oz"){
+    if (unit == "ounces"){
         a = convert_oz_to_kg(amount);
     }
-    else if (unit == "lbs"){
+    else if (unit == "pounds"){
         a = convert_lbs_to_kg(amount);
       }
     else if (unit == "cups"){
@@ -104,12 +104,12 @@ function scores(food, amount, unit){
         density = foodData[indx].Density;
         a = convert_cups_to_kg(amount, density);
     }
-    else if (unit == "unit"){
+    else if (unit == "units"){
         //PLACEHOLDER - find weight
         weight = foodData[indx].UnitWeight;
         a = convert_cups_to_kg(amount, weight);
     }
-    else if (unit == "g"){
+    else if (unit == "grams"){
         a = convert_g_to_kg(amount);
       }
     else{
@@ -122,13 +122,13 @@ function scores(food, amount, unit){
     w = 0;
 
     if(carbon_per_kg== null){
-      c = null;
+      c = "unknown";
     } else {
       c = carbon_per_kg*a;
     }
 
     if(water_per_kg== null){
-      w = null;
+      w = "unknown";
     } else {
       w = water_per_kg*a;
     }
