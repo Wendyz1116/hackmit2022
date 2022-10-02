@@ -1,6 +1,6 @@
 /* function openTab(evt, cityName)
 {
-  
+
 }NEED TO GET CSS AND PNG FILES IN THE GIT
 */
 console.log(1);
@@ -22,20 +22,22 @@ function add()
     amtArray.push(amount);
     const unit = document.querySelector(".amtUnit").value;
     unitArray.push(unit);
-    
+
     if (!amount || !unit || !food) {
         exit; //want to also have a text with hidden and remove the hidden to say there was an error
     } //checks for bad inputs
     //also would want to try catch to make sure it wont mess with back end
     text = text + "<br/>" + amount + " " + unit + " of " + food + "<br/>";
     document.getElementById("foodList").innerHTML = text;
-    
+
 
     setText("item", "");
     setText("amt", "");
     console.log(itemArray);
     console.log(amtArray);
     console.log(unitArray);
+
+
     //console.log(amount + " " + measurement);
 }
 
@@ -43,3 +45,74 @@ function setText(piece, text) {
     document.querySelector("." + piece).value = text;
 }
 
+function convert_oz_to_kg(oz){
+  return 0.02834952*oz;
+}
+
+function convert_lbs_to_kg(lbs){
+  return 0.4535924*lbs;
+}
+
+function convert_cups_to_kg(cups, p){
+  //assuming p in kg/m^3
+  return convert_oz_to_kg(p*cups*0.00023658823648491);
+}
+
+
+function convert_unit_to_kg(unit, weight){
+  //assuming weight in oz
+  return unit*convert_oz_to_kg(weight);
+}
+
+
+function convert_g_to_kg(g){
+  return g/1000;
+}
+
+function scores(food, amount, unit){
+
+    indx = 0;
+
+    for (i = 0; i < foodData.length; i++){
+        if (food == foodData[i].item){
+            indx = i;
+          }
+    }
+
+    console.log(foodData[indx].item);
+    carbon_per_kg = foodData[indx].carbon;
+    water_per_kg = foodData[indx].water;
+    console.log(water_per_kg);
+
+    a = 0;
+    if (unit == "oz"){
+        a = convert_oz_to_kg(amount);
+    }
+    else if (unit == "lbs"){
+        a = convert_lbs_to_kg(amount);
+      }
+    else if (unit == "cups"){
+        //PLACEHOLDER - find density
+        density = foodData[indx].Density;
+        a = convert_cups_to_kg(amount, density);
+    }
+    else if (unit == "unit"){
+        //PLACEHOLDER - find weight
+        weight = foodData[indx].UnitWeight;
+        a = convert_cups_to_kg(amount, weight);
+    }
+    else if (unit == "g"){
+        a = convert_g_to_kg(amount);
+      }
+    else{
+        console.log("Unit Error");
+        return "Unit Error";
+    }
+
+    console.log(a);
+
+    return(carbon_per_kg*a, water_per_kg*a);
+
+}
+
+console.log(scores("Almonds (shelled or peeled)", 2, "g"));
