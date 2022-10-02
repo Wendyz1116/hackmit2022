@@ -224,10 +224,12 @@ footer
     position: fixed;
     bottom: 0px;
     height: 50px;
-    width: 2800px;
-    vertical-align: middle;
+    width: 100%;
+    text-align:center;
     background-color: #2F4858;
+    padding-top: 10px;
 }
+
 h9
 {
  text-transform: uppercase;
