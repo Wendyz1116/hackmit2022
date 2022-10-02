@@ -5,9 +5,9 @@
    New Perspectives on HTML5 and CSS3, 8th Edition
    Tutorial 6
    Case Problem 2
-   
+
    LHT Reset Style Sheet
-   
+
    Filename: lht_reset.css
 
 */
@@ -16,13 +16,13 @@
 /* Basic styles to be used with all devices and under all conditions */
 
 article, aside, figcaption, figure,
-footer, header, main, nav, section { 
+footer, header, main, nav, section {
    display: block;
 }
 
-address, article, aside, blockquote, body, cite, 
-div, dl, dt, dd, em, figcaption, figure, footer, 
-h1, h2, h3, h4, h5, h6, header, html, img, 
+address, article, aside, blockquote, body, cite,
+div, dl, dt, dd, em, figcaption, figure, footer,
+h1, h2, h3, h4, h5, h6, header, html, img,
 li, main, nav, nav a, ol, p, section, span, ul,
 table, tr, td, th, col, colgroup {
    margin: 0;
@@ -32,14 +32,14 @@ table, tr, td, th, col, colgroup {
    background: transparent;
    -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
-   box-sizing: border-box;  
+   box-sizing: border-box;
 }
 
 
 /* Set the default page element styles */
 
 body {
-   line-height: 1.2em;
+   line-height: 1.5em;
 }
 
 ul, ol {
@@ -55,10 +55,10 @@ nav a {
    text-decoration: none;
 }
 
-
 img#navicon {
    display: none;
 }
+
 img#logoimg
 {
    display: block;
@@ -68,48 +68,52 @@ img#logoimg
 
 @font-face
 {
-    font-family: aT;
+    font-family: 'Raleway', sans-serif;
     src: url('amerType.woff') format('woff'),
         url('amerType.ttf') format('truetype');
 }
 
 header
 {
-  background:  #333;
+  background:  #2F4858;
 }
 
 body
 {
-   background-color: #f0e9e0;
-   min-height: 100%;   
+   background-color: #daf7dc;
+   min-height: 100%;
    margin: 0px auto;
    width: 100%;
-   color: hsl(0,0%,20%);
+   color: #2F4858;
 }
 
 h1
 {
- font-family: aT;
- margin: 18px auto 13px auto;
+ font-family: 'Raleway', sans-serif;
+ margin: 30px auto 20px auto;
  font-size: 52px;
  text-align: center;
  text-transform: uppercase;
 }
+
 h2
 {
-   font-family: aT;
-   color: #333;
+   font-family: 'Raleway', sans-serif;
+   color: #2F4858;
    font-weight: normal;
    text-align: center;
    font-size: 38px;
    line-height: 13px;
    margin: 38px auto 13px auto;
 }
+
 h3, h4
 {
    padding: 10px;
-   font-family: aT;
-   color: #333;
+   margin-top: 25px;
+   margin-bottom: 0px;
+   font-family: 'Raleway', sans-serif;
+   color: #2F4858;
    text-align: center;
    font-size: 23px;
    line-height: 38px;
@@ -129,12 +133,12 @@ h4
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
-   font-family: aT;
+   font-family: 'Raleway', sans-serif;
    text-align: center;
    font-size: 1.3em;
    text-transform: uppercase;
    background-color: #f0e9e0;
-   color: #333;
+   color: #2F4858;
    border: none;
    outline: none;
    cursor: pointer;
@@ -152,7 +156,7 @@ h4
 /* Create an active/current tablink class */
 .tab button.active
 {
-   background-color: #333;
+   background-color: #2F4858;
    color: white;
 }
 
@@ -165,60 +169,42 @@ h4
 }
 p, table.tabcontent td p
 {
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
   text-align: center;
   padding: 8px;
   line-height: 13px;
   font-size: 18px;
 }
 
-/*---------*/
-
-p.transcript, article.vocab p, section.transcript p, table.tabcontent td p
-{
- line-height: 32px;
-}
-p.py, p.chinese, p.trans, table.tabcontent td p
-{
- color: #333;
- padding: 0px;
- margin: -13px;
-}
-
-p.py, p.trans, table.tabcontent td p.trans
-{
- color: #434F60;
- margin-bottom: 13px;
-}
-b
-{
- color: black;
-}
-p.term, p.def
-{
- padding: 0px 38px;
- 
-}
-p.term
-{
-  margin-bottom: -13px;
-}
-p.break
-{
- margin: -10px;
-}
-
 button, select
 {
- font-family: aT;
+ font-family: 'Raleway', sans-serif;
  font-size: 18px;
  margin: 18px;
  padding: 8px;
+ border-style: none;
+ background-color: #2F4858;
+ color:white;
+ border-radius: 3px;
 }
+
+button:hover, select:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+input{
+  padding:8px;
+  font-size: 18px;
+  border-style: none;
+  border-radius:3px;
+  color: #2f4858;
+}
+
 
 label
 {
-  font-family: aT;
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
   padding: 18px;
   width: 38px;
@@ -232,18 +218,19 @@ select
 
 footer
 {
- font-family: sans-serif;
+    font-family: 'Raleway', sans-serif;
     text-align: center;
     color: white;
+    position: fixed;
+    bottom: 0px;
     height: 50px;
-    display: table-cell;
     width: 2800px;
     vertical-align: middle;
-    background: hsl(50,0%,20%);
+    background-color: #2F4858;
 }
 h9
 {
- text-transform: uppercase; 
- font-family: wenBas;
+ text-transform: uppercase;
+ font-family: 'Raleway', sans-serif;
  font-size: 20px;
 }
