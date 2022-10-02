@@ -1938,7 +1938,10 @@ function add() {
     //console.log(amount);
     //console.log("\n\n");
     //hasError(food, amount, unit);
-    if (hasError(food, amount, unit)) console.log(1);
+    if (hasError(food, amount, unit)) {
+      console.log(1);
+      return;
+    }
 
     //also would want to try catch to make sure it wont mess with back end
     scores(food, amount, unit);
@@ -2001,7 +2004,9 @@ function add() {
 }
 
 function hasError(fod, amt, unt) {
+    document.getElementById("errors").innerHTML = " ";
     if (fod === "" || amt === "" || unt === "") {
+        document.getElementById("errors").innerHTML = "Please fill in all the text boxes and select a unit.";
         console.log("Unfilled");
         return true;
     } //checks if value is empty
@@ -2011,31 +2016,35 @@ function hasError(fod, amt, unt) {
         foodRow[i] = foodData[i].item;
     }
     if (!foodRow.includes(fod)) {
-        console.log("BAD");
+        document.getElementById("errors").innerHTML = "No such food on list. Please select a food item from the dropdown.";
+        console.log("BAD FOOD");
         return true;
     } //checks if food is in list
 
     if (isNaN(amt)) {
+        document.getElementById("errors").innerHTML = "Please enter a number for units.";
         console.log("NOT A NUMBER");
         return true;
     } //checks if the amount is a numnber
 
     let index = 0;
     for (let j = 0; j < foodData.length; j++) {
-        console.log(foodData[j].item);
+        //console.log(foodData[j].item);
         if (fod === foodData[j].item) {
             index = j;
             break;
         }
     }
     userData = foodData[index];
-    console.log(userData);
-    console.log(!userData.Density);
+    //console.log(userData);
+    //console.log(!userData.Density);
     if (!userData.Density && unt === "cups") {
+        document.getElementById("errors").innerHTML = "We do not have data on cups for this item. Please try a different unit. (Grams, pounds, and ounces work for all foods.)";
         console.log("YOU PUT CUPS");
         return true;
     }
     if (!userData.UnitWeight && unt === "units") {
+        document.getElementById("errors").innerHTML = "We do not have data on single units for this item. Please try a different unit. (Grams, pounds, and ounces work for all foods.)";
         console.log("STOP IT YOU PUT UNITS");
         return true;
     }
