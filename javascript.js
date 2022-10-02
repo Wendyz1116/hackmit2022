@@ -13,6 +13,7 @@ const amtArray = [];
 const unitArray = [];
 const carbonArray = [];
 const waterArray = [];
+const inRecipe = [];
 var listInd = 0;
 var totalW = 0;
 var totalC = 0;
@@ -1949,6 +1950,7 @@ function add() {
     itemArray.push(food);
     amtArray.push(amount);
     unitArray.push(unit);
+    inRecipe.push(1);
     text = document.getElementById("foodList").innerHTML;
 
     if (waterArray[waterArray.length - 1] == "unknown")
@@ -2006,11 +2008,14 @@ function add() {
 }
 
 function removeItem(itemID){
-  document.getElementById(itemID.toString()).innerHTML = "";
+  var e = document.getElementById(itemID.toString());
+  e.parentNode.removeChild(e);
+  inRecipe[itemID] = 0;
   if(waterArray[itemID] != "unknown") totalW -= waterArray[itemID];
   if(carbonArray[itemID] != "unknown") totalC -= carbonArray[itemID];
   document.getElementById("totalWater").innerHTML = Math.round(totalW);
   document.getElementById("totalCarbon").innerHTML = Math.round(totalC);
+  return false;
 }
 
 function hasError(fod, amt, unt) {
